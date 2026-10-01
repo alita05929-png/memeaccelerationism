@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Accelerationism — s/acc</title>
+    <meta
+      name="description"
+      content="Super Accelerationism (s/acc) is a Solana token. The bolt is the mark. The future does not wait."
+    />
+    <link rel="icon" href="brand/emblem.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Sora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="#top">
+        <img src="brand/logo.png" alt="" width="44" height="44" />
+        <span>Super Accelerationism</span>
+      </a>
+      <nav>
+        <a href="#signal">Signal</a>
+        <a href="#token">Token</a>
+        <a href="#path">Path</a>
+        <a href="https://x.com/superaccsol" target="_blank" rel="noreferrer">X</a>
+      </nav>
+      <button class="ticker-chip" type="button" data-copy="s/acc">s/acc</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-art" src="brand/banner-clean.png" alt="" />
+        <div class="hero-copy">
+          <p class="kicker">
+            <svg viewBox="0 0 32 26" aria-hidden="true">
+              <path d="M6.2 1.5h22.4L24.2 7H2z" />
+              <path d="M5.2 10.2h22.4l-4.4 5.5H.8z" />
+              <path d="M7.4 18.8h22.4L25.4 24.4H3z" />
+            </svg>
+            Solana
+          </p>
+          <h1>Super<br />Accelerationism</h1>
+          <p class="hero-ticker">s/acc</p>
+          <p class="lead">
+            The bolt on the chest is the whole idea. Move first. Mint the speed.
+            Super Accelerationism lives on Solana under the ticker s/acc.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#token">Token</a>
+            <a class="btn ghost" href="https://x.com/superaccsol" target="_blank" rel="noreferrer">X</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="signal" class="panel signal">
+        <div class="signal-copy">
+          <p class="eyebrow">Signal</p>
+          <h2>The future is a velocity, not a date.</h2>
+          <p>
+            Super Accelerationism is the push to make what is coming arrive now:
+            faster rails, sharper conviction, no pause for permission. s/acc is
+            that stance turned into a Solana token.
+          </p>
+          <p>
+            The mark stays the same from logo to banner. An energy figure, a red
+            cape, and a lightning ring. One direction. No detour.
+          </p>
+        </div>
+        <figure>
+          <img src="brand/hero.png" alt="Super Accelerationism figure in a red cape, running through light" />
+        </figure>
+      </section>
+
+      <section id="token" class="panel token">
+        <div class="token-head">
+          <p class="eyebrow">Token</p>
+          <h2>Name, ticker, chain.</h2>
+        </div>
+        <div class="spec">
+          <img src="brand/emblem.png" alt="" />
+          <dl>
+            <div>
+              <dt>Name</dt>
+              <dd>Super Accelerationism</dd>
+            </div>
+            <div>
+              <dt>Ticker</dt>
+              <dd>
+                <button type="button" data-copy="s/acc">s/acc</button>
+              </dd>
+            </div>
+            <div>
+              <dt>Network</dt>
+              <dd>Solana</dd>
+            </div>
+            <div>
+              <dt>Mint</dt>
+              <dd>Posted on this page when the token is live. Until then, there is no contract to copy.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="path" class="panel path">
+        <p class="eyebrow">Path</p>
+        <h2>Three steps. Then you are in motion.</h2>
+        <ol>
+          <li>
+            <span>01</span>
+            <h3>Open a Solana wallet</h3>
+            <p>Phantom is the direct route. Create the wallet and write the recovery phrase down offline.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>Hold SOL</h3>
+            <p>You need SOL for the swap and for the network fee. Send it on Solana, not another chain.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>Swap for s/acc</h3>
+            <p>
+              When the mint is announced here, swap on
+              <a href="https://jup.ag/" target="_blank" rel="noreferrer">Jupiter</a>.
+              Match that address. Ignore lookalike tickers.
+            </p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <img src="brand/logo.png" alt="" width="56" height="56" />
+      <div>
+        <strong>Super Accelerationism</strong>
+        <span>s/acc · Solana · <a href="https://x.com/superaccsol" target="_blank" rel="noreferrer">x.com/superaccsol</a></span>
+      </div>
+      <p>
+        s/acc is a memecoin. Price can go to zero. This page is not an offer, a
+        listing, or financial advice.
+      </p>
+    </footer>
+
+    <script>
+      document.querySelectorAll("[data-copy]").forEach((el) => {
+        el.addEventListener("click", async () => {
+          const value = el.getAttribute("data-copy");
+          try {
+            await navigator.clipboard.writeText(value);
+            const previous = el.dataset.label || el.textContent;
+            if (!el.dataset.label) el.dataset.label = previous;
+            el.textContent = "Copied";
+            setTimeout(() => {
+              el.textContent = previous;
+            }, 1200);
+          } catch (err) {
+            el.textContent = value;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
